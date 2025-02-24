@@ -1,0 +1,117 @@
+#search {
+  font-size: 1em;
+}
+
+
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* justify-content: center !important; Centrage par défaut */
+}
+
+.results-number {
+  font-weight: bold;
+}
+
+.result {
+  border: 2px solid #fbdc2d;
+  background-color: #fbdc2d04;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.result:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.result-resa {
+  border: 2px solid #fbdc2d;
+  background-color: #fbdc2d04;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.result-resa:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.location, .vehicleName {
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+.date {
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+}
+
+.power,
+.price, .socket, .location {
+  color: grey;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.reservation-stats-label {
+  color: grey;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.reservation-stats-data {
+  font-size: 0.9em;
+}
+
+.availability,
+.distance {
+  padding-top: 1em;
+  font-style: italic;
+  font-size: 0.7em;
+}
+
+.availability .available {
+  color: #27d39a;
+  font-weight: bold;
+}
+
+.availability .non-available {
+  color: red;
+  font-weight: bold;
+}
+
+.CreditCards, .IBAN {
+  border: 2px solid #fbdc2d;
+  background-color: #fbdc2d04;
+  border-radius: 12px;
+  padding: 1rem;
+  width: auto;
+  display: flex;
+  flex-direction: column; 
+  gap: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.CreditCards:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}

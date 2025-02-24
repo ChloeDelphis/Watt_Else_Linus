@@ -1,0 +1,26 @@
+.myInfo{
+    border: 2px solid #fbdc2d;
+    background-color: #fbdc2d04;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 50vw;
+
+
+}
+
+.myInfo * {
+    margin: 1em 2em;
+}
+
+.myInfo div:first-child {
+    font-weight: bold;
+}
+
+.myInfo__modify {
+    color: white;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}

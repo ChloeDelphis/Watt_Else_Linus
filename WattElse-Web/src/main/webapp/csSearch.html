@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chercher une station de recharge</title>
+
+    <link rel="icon" type="image/png" href="./resources/icon/bolt-solid.svg">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href=" https://cdn.jsdelivr.net/npm/bootswatch@5/dist/yeti/bootstrap.min.css " rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/form.css">
+    <link rel="stylesheet" href="./resources/css/results.css">
+    <link rel="stylesheet" href="./resources/css/animations.css">
+
+    <!-- scripts -->
+    <script src="./arch/arch.js" defer></script>
+    <script type="module" src="./controller/csSearchController.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <div id="header" class="mt-2 mb-2">
+    </div>
+
+    <div id="navigation" class="mb-5">
+    </div>
+
+    <main class="container p-4">
+
+        <div id="search" class=" row border align-items-center justify-content-between p-3 niceForm">
+
+            <div class="form-label col-6 col-lg-3">
+                <label class="mb-1" for="vehicleSelect">Mon véhicule</label>
+                <select class="form-select w-100" name="vehicleSelect" id="vehicleSelect">
+                    <!-- <option value="choseVehicle" selected disabled>Choisir un véhicule</option> -->
+
+                </select>
+            </div>
+            <div class="form-label col-6 col-lg-3">
+                <label class="form-label" for="disabledInput">Prise</label>
+                <input class="form-control" type="text" disabled id="socket">
+            </div>
+
+            <div class="form-label col-6 col-lg-3">
+                <label class="mb-1" for="dptSelect">Département</label>
+                <select class="form-select w-100" name="dptSelect" id="dptSelect">
+                    <option value="default" selected disabled>Choisir un département</option>
+                </select>
+
+            </div>
+
+            <div class="form-label col-6 col-lg-3">
+                <label class="mb-1" for="citySelect">Ville</label>
+                <select class="form-select w-100" name="citySelect" id="citySelect" disabled>
+
+
+                </select>
+            </div>
+
+            <div class="d-flex col-12 mt-3 d-none" id="range">
+                <div>
+                    <label class="form-check-label" for="searchAround">
+                        Rayon de la recherche :
+                        <span id="number-of-km"></span> km
+                    </label>
+                </div>
+                <div class="form-label ms-3">
+                    <input type="range" min="0" max="20" step="1" value="2" id="radiusRange" disabled>
+                </div>
+            </div>
+
+            <div class=" d-flex row align-items-center">
+                <div class="d-none form-check form-switch col-12 col-md-6 ms-3">
+                    <input class="form-check-input" type="checkbox" id="searchAroundMe">
+                    <label class="form-check-label" for="searchAroundMe">
+                        Chercher autour de moi
+                    </label>
+                </div>
+
+
+
+                <div class=" form-check form-switch col-12 ms-3">
+                    <input class="form-check-input" type="checkbox" id="currentlyAvailableStations">
+                    <label class="form-check-label" for="currentlyAvailableStations">
+                        Voir seulement les stations disponibles en ce moment</label>
+                </div>
+
+                <fieldset class="d-flex row mt-3">
+                    <legend class="">Trier les stations</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="optionsOrder" id="orderByPowerDesc"
+                            value="orderByPowerDesc" checked="">
+                        <label class="form-check-label" for="orderByPowerDesc">
+                            Les plus puissantes en premier.
+                        </label>
+                    </div>
+                    <div class="form-check d-none" id="OrderByDistance">
+                        <input class="form-check-input" type="radio" name="optionsOrder" id="orderByDistanceAsc"
+                            value="orderByDistanceAsc" disabled="">
+                        <label class="form-check-label" for="orderByDistanceAsc">
+                            Les plus proches en premier.
+                        </label>
+                    </div>
+                </fieldset>
+
+            </div>
+
+            </div>
+
+            <div id="results" class="d-flex flex-column mt-5">
+
+                <div class="results-number" id="results-number">
+                    Résultats :
+                </div>
+
+
+                <div id="results-stations" class="row align-items-center justify-content-center 
+            justify-content-md-between">
+
+                    <!-- <div class="result">
+                <div class="info">
+                    <div class="location">
+                        <span class="location-city">Orsay,</span>
+                        <span class="location-dpt">Essonne</span>
+                    </div>
+                    <div class="power">
+                        Puissance : <span class="power-number">11</span> kW
+                    </div>
+                    <div class="price">
+                        <span class="price-number">11€</span>
+                        <span class="price-tarification">/heure</span>
+                    </div>
+                    <div class="availability">
+                        <i class="fa-solid fa-circle available me-1"></i>
+                        <span class="availability-info">Disponible maintenant !</span>
+                    </div>
+                    <div class="distance">
+                        <i class="fa-solid fa-map-marker-alt me-1"></i>À
+                        <span class="distance-info">5</span>km
+                    </div>
+
+                </div>
+
+                <div class="grade">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="grade-number">5,0</span>
+                </div>
+            </div> -->
+
+
+                </div>
+            </div>
+
+        
+
+
+    </main>
+
+    <div id="footer" class="mt-5">
+
+    </div>
+
+
+
+</body>
+
+</html>

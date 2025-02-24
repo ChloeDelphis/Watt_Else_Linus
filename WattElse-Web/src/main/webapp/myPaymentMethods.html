@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Moyens de paiement</title>
+
+    <link rel="icon" type="image/png" href="./resources/icon/bolt-solid.svg">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href=" https://cdn.jsdelivr.net/npm/bootswatch@5/dist/yeti/bootstrap.min.css " rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="./resources/css/animations.css">
+    <link rel="stylesheet" href="./resources/css/results.css">
+    <link rel="stylesheet" href="./resources/css/form.css">
+    <link rel="stylesheet" href="./resources/css/button.css">
+    <link rel="stylesheet" href="./resources/css/table.css">
+
+    <!-- arch -->
+    <script async src="./arch/arch.js"></script>
+    <script async type="module" src="./controller/myPaymentMethodsController.js"></script>
+
+</head>
+
+<body>
+    <div id="header" class="mt-2 mb-2">
+
+    </div>
+    <div id="navigation" class="mb-5">
+
+    </div>
+
+    <main class="container">
+        <div class="row">
+            <main class="container">
+                <div class="row">
+                    <h4 class="text-center fst-italic col-12">Mes moyens de paiement</h4>
+
+                    <div class="row-md-8 col-12 d-flex flex-column align-items-center justify-content-center">
+                        <!-- Bouton "Ajouter une Carte de crédit" -->
+                        <div class="col-md-7 col-lg-8 d-flex justify-content-center align-items-center">
+                            <input id="addingCCButton" class="btn btn-primary extraLargeGreenButton"
+                                value="Ajouter une carte de crédit">
+                        </div>
+
+                        <div class="row-md-6">
+                            <form id="addingCCForm" class="border m-4 p-4 d-none niceForm">
+                                <div class="mx-auto">
+                                    <label for="addNumberCardInput">Numéro de la carte</label>
+                                    <input id="addNumberCardInput" type="text" class="form-control">
+                                </div>
+                                <div class="mx-auto">
+                                    <label for="addExpirationDateInput">Date d'expiration</label>
+                                    <input id="addExpirationDateInput" type="date" class="form-select">
+                                </div>
+                                <div class=" mx-auto">
+                                    <label for="addCcsInput">Code de sécurité</label>
+                                    <input id="addccsInput" type="text" class="form-control">
+                                </div>
+
+                                <div class="pt-4 text-center">
+                                    <input id="validateAddingCCButton" type="button"
+                                        class="btn btn-primary smallGreenButton" value="Ajouter" />
+                                    <input id="abbortAddingCCButton" type="button" class="btn btn-primary redbutton"
+                                        value="Annuler" />
+                                </div>
+
+                                <div class="row mt-3">
+                                    <label class="text-warning" id="messageLabel"></label>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Bouton "Ajouter un compte bancaire" -->
+                        <div class="col-md-7 col-lg-8 d-flex justify-content-center align-items-center">
+                            <input id="addingBAButton" class="btn btn-primary extraLargeGreenButton"
+                                value="Ajouter un compte bancaire">
+                        </div>
+
+                        <div class="row-md-6">
+                            <form id="addingBAForm" class="border p-4 m-4 d-none niceForm">
+                                <div class=" mx-auto">
+                                    <label for="addIBANInput">IBAN</label>
+                                    <input id="addIBANInput" type="text" class="form-control">
+                                </div>
+                                <div class="mx-auto">
+                                    <label for="addBICInput">BIC</label>
+                                    <input id="addBICInput" type="text" class="form-control">
+                                </div>
+
+                                <div class="pt-4 text-center">
+                                    <input id="validateAddingBAButton" type="button"
+                                        class="btn btn-primary smallGreenButton" value="Ajouter" />
+                                    <input id="abbortAddingBAButton" type="button" class="btn btn-primary redbutton"
+                                        value="Annuler" />
+                                </div>
+
+                                <div class="row mt-3">
+                                    <label class="text-warning" id="messageLabel"></label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div id="results" class="row justify-content-center">
+                        <div class="col-4">
+                            <div id="results" class="row align-items-center justify-content-md-between mt-5">
+
+<!--
+                                <div id="resultsBank" class="BankAccounts ">
+                                    <h4 class="text-center text-primary mb-4">Mon compte bancaire</h4>
+                                    <div class="IBAN">
+                                        <div>
+                                            <span class="Iban">Iban : 12457********621</span>
+                                        </div>
+                                        <div class="BIC">
+                                            <span class="BIC">BIC : 78945*****789465</span>
+                                        </div>
+
+                                        <div class="buttonsCS d-flex flex-row align-items-center">
+                                            <input id="modifyBA" class="btn btn-primary smallGreenButton"
+                                                value="Modifier">
+                                            <input id="deleteBA" class="btn btn-primary redbutton" value="Supprimer">
+                                        </div>
+                                    </div>
+                                </div>
+                            -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </main>
+
+    <div id="footer" class="mt-5">
+    </div>
+
+
+</body>
+
+</html>

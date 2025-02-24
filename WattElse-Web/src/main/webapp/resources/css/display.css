@@ -1,0 +1,18 @@
+#modifyCS, #modVehicle{
+    background: #27d39a !important;
+    border-color: #27d39a !important;
+    border-width: 2px !important;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+
+  #deleteCS, #suppVehicle{
+    background: red !important;
+    border-color: red !important;
+    border-width: 2px !important;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+

@@ -1,0 +1,135 @@
+#addingCSButton,
+#validateAddingCSButton,
+#abbortAddingCSButton,
+#modifyCS
+{
+    background: #27d39a;
+    border-color: #27d39a;
+    border-width: 5px !;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 1px;
+
+}
+
+.greenButton {
+    background: #27d39a;
+    border-color: #27d39a;
+    border-width: 1px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 5px;
+}
+
+.greenButton:hover {
+    background: #22ba88;
+    border-color: #22ba88;
+    border-width: 1px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 5px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.extraLargeGreenButton,
+.extraLargeGreenButton:hover
+ {
+    background: #27d39a;
+    border-color: #27d39a;
+    width: 400px !important;
+    border-width: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 1px;
+}
+
+.largeGreenButton,
+.largeGreenButton:hover
+ {
+    background: #27d39a;
+    border-color: #27d39a;
+    width: 250px !important;
+    border-width: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 1px;
+}
+
+.mediumGreenButton,
+.mediumGreenButton:hover {
+    background: #27d39a;
+    border-color: #27d39a;
+    width: 210px !important;
+    border-width: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 1px;
+}
+
+.smallGreenButton,
+.smallGreenButton:hover {
+    background: #27d39a;
+    border-color: #27d39a;
+    width: 150px;
+    border-width: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.redbutton,
+.redbutton:hover {
+    background: red;
+    border-color: red;
+    width: 150px;
+    border-width: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.redButton {
+    background: red;
+    border-color: red;
+    border-width: 1px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 5px;
+}
+
+.redButton:hover {
+    background: rgb(209, 0, 0);
+    border-color: rgb(209, 0, 0);
+    border-width: 1px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 5px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.yellowbutton,
+.yellowbutton:hover {
+    background: #fbdc2d;
+    border-color: #fbdc2d;
+    width: 150px;
+    border-width: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+
+.yellowButton {
+    background:  #fbdc2d;
+    border-color:  #fbdc2d;
+    border-width: 1px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 5px;
+}
+
+.yellowButton:hover {
+    background:  #d0b726;
+    border-color:  #d0b726;
+    border-width: 1px;
+    border-radius: 1rem;
+    font-weight: bold;
+    margin : 5px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}

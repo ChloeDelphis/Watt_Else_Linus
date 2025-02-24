@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand bg-dark pb-2 pe-2" data-bs-theme="dark">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="true">
+                        <i id="user-icon" class="fa-solid fa-circle-user me-1"></i>
+                        <span class="d-none d-md-inline">Mon espace</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <!-- <div class="dropdown-menu show" data-bs-popper="static"> -->
+                        <a class="dropdown-item" href="myInfo.html">
+                            <i class="fa fa-key me-1"></i>
+                            Mes informations</a>
+                        <a class="dropdown-item" href="myPaymentMethods.html">
+                            <i class="fa fa-coins me-1"></i>
+                            Mes moyens de paiement</a>
+                        <a class="dropdown-item" href="myVehicles.html">
+                            <i class="fa-solid fa-car me-1"></i>
+                            Mes véhicules</a>
+                        <a class="dropdown-item" href="myChargingStations.html">
+                            <i class="fa-solid fa-plug me-1"></i>
+                            Mes bornes
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="disconnect()">
+                            <i class="fa fa-power-off me-1"></i>
+                            Déconnexion
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./csSearch.html">
+                        <i id="magnifier-icon" class="fa-solid fa-magnifying-glass"></i>
+
+                        <span class="d-none d-md-inline">Recherche</span>
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="myReservations.html">
+                        <i id="calendar" class="fa-solid fa-calendar-days me-1"></i>
+                        <span class="d-none d-md-inline">
+                            Mes réservations
+                        </span>
+                    </a>
+                </li>
+
+            </ul>
+            <label id="connected-user" class="fst-italic">
+                Enrico Palazzo
+            </label>
+
+        </div>
+    </div>
+</nav>

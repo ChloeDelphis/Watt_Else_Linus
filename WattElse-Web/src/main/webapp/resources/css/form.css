@@ -1,0 +1,26 @@
+.niceForm
+ {
+  border-color: #27d39a !important;
+  border-width: 3px !important;
+  border-radius: 1rem;
+}
+
+#searchReservationButton{
+  min-width: 270px
+}
+
+#messageLabel {
+  color: red !important;
+  font-weight: bold !important;
+  font-size: x-large !important;
+  text-align: center;
+}
+
+/* changer le glow à la sélection d'un champ  */
+#search
+.form-select:focus,
+.form-check:focus {
+  border-color: #27d39a !important;
+  box-shadow: 0 0 5px #27d39a !important;
+  outline: none !important;
+}

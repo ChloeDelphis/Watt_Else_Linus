@@ -3,9 +3,19 @@
 Watt Else est un application de mise en relation des fournisseurs
 et des clients de stations de recharge de véhicules électriques.
 
+L'application permet de s'inscrire, se connecter, enregistrer une station de recharge, des véhicules,
+des moyens de paiement et un moyen pour recevoir des paiements, d'enregistrer une station de recharge
+ainsi que ses disponiblités, de chercher une station et de s'inscrire sur un créneau libre.
+L'utilisateur peut ensuite indiquer quand la charge commence et termine effectivement.
+
 L'application est sécurisée par un système d'authentification
 et d'autorisation basé sur des rôles et l'émission d'un token
 à validité limitée dans le temps.
+
+## Contexte
+
+Ce projet a été réalisé en équipe de 4 en 2 semaines de développement dans le contexte
+de la formation "Analyste informaticien" de l'école EQL en février 2025.
 
 ## Dossiers préparatoires
 
